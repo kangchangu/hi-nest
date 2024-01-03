@@ -1,0 +1,36 @@
+@URL = http://localhost:3000
+@URL_MOVIES =  {{URL}}/movies
+
+## GET ALL
+GET {{URL_MOVIES}}
+
+### Search
+GET {{URL_MOVIES}}/search?year=2000
+
+
+### GET ONE
+GET {{URL_MOVIES}}/1
+
+### DELETE
+DELETE {{URL_MOVIES}}/12
+
+### CREATE
+POST {{URL_MOVIES}}
+Content-Type: application/json
+
+{
+    "title" : "테스트 무비" ,
+    "year" : 2023,
+    "genres" : ["영화" , "드라마"]
+}
+
+### PATCH
+PATCH  {{URL_MOVIES}}/105
+Content-Type: application/json
+
+{
+    "name" : "Moive-1",
+    "description" : "무비 테스트 1234"
+}
+
+
